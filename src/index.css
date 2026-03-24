@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Hide React Flow attribution watermark */
+.react-flow__attribution {
+  display: none !important;
+}
+
+/* Smooth theme transitions on the whole page */
+* {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Except canvas drag/zoom - don't transition transforms */
+.react-flow__viewport,
+.react-flow__node {
+  transition-property: none !important;
+}
